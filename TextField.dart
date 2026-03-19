@@ -14,7 +14,7 @@ class Home extends StatefulWidget {
 }
 class _HomeState extends State<Home> {
   String TextEntered = " ";
-  String text = "No Value Entered";
+  String text = "please enter the value";
   void _setText() {
     setState(() {
       text = TextEntered;
