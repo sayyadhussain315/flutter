@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
               BodyWidget(),
               BodyWidget()
             ]
-             )
+        )
       ),
     );
   }
