@@ -1,6 +1,7 @@
 //////    Home Screen For Doctor Project in Grid Voew
 import 'package:flutter/material.dart';
 import 'package:untitled/models/doctor.dart';
+
 import 'package:untitled/util/data_store.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,7 +13,11 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: const Text('Doctors'),
+        title: const Text('Doctors',
+        style : TextStyle(
+            fontSize: 15,
+        
+        )),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
