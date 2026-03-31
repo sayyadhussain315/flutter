@@ -16,7 +16,6 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Doctors',
         style : TextStyle(
             fontSize: 15,
-        
         )),
       ),
       body: Padding(
