@@ -30,7 +30,7 @@ class _MyHomePageState extends State<_MyHomePage> {
         body: SfCartesianChart(
             primaryXAxis: CategoryAxis(),
             // Chart title
-            title: ChartTitle(text: 'Monthly Covid-19 Infections'),
+            title: ChartTitle(text: 'Yearly Petrol Price Tracking Chart'),
             // Enable legend
             legend: Legend(isVisible: true),
             // Enable tooltip
@@ -38,13 +38,18 @@ class _MyHomePageState extends State<_MyHomePage> {
             series: <CartesianSeries<_Infections, String>>[
               LineSeries<_Infections, String>(
                   dataSource: <_Infections>[
-                    _Infections('Jan', 35000),
-                    _Infections('Feb', 28000),
-                    _Infections('Mar', 34000),
-                    _Infections('Apr', 32000),
-                    _Infections('May', 40000),
-                    _Infections('Jun', 60000)
-                  ],
+                    _Infections("2016", 70.29),
+                    _Infections("2017", 75.50),
+                    _Infections("2018", 97.83),
+                    _Infections("2019", 113.24),
+                    _Infections("2020", 103.97),
+                    _Infections("2021", 137.79),
+                    _Infections("2022", 224.80),
+                    _Infections("2023", 283.38),
+                    _Infections("2024", 283.38),
+                    _Infections("2025", 265.44),
+                    _Infections("2026", 376.00),
+                    ],
                   xValueMapper: (_Infections victims, _) => victims.year,
                   yValueMapper: (_Infections victims, _) => victims.victims,
                   // Enable data label
@@ -56,6 +61,6 @@ class _MyHomePageState extends State<_MyHomePage> {
 class _Infections {
   _Infections(this.year, this.victims);
 
-  final String year;
+  final String  year;
   final double victims;
 }
