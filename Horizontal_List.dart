@@ -26,8 +26,8 @@ class MyApp extends StatelessWidget {
                 width: 240.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage(
-                        'https://4kwallpapers.com/images/walls/thumbs_2t/13495.jpg'),
+                    image: images(
+                        ''),
                     fit: BoxFit.fill,
                   ),
                   shape: BoxShape.rectangle,
