@@ -121,7 +121,8 @@ class _MyAppState extends State<MyApp> {
                       },
                     ),
                   ),
-                  SizedBox(height: 10),
+                  // region for password
+                  SizedBox(height: 20),
                   Container(
                     child: Text("Password",
                       style: TextStyle(
@@ -133,17 +134,29 @@ class _MyAppState extends State<MyApp> {
                     child:  TextFormField(
                       controller: password,
                       obscureText: true,
+                      obscuringCharacter: "*",
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
                           hintText: "please enter your password",
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)
-                          )
+                          ),
+
+                        suffixIcon: IconButton(onPressed: (){
+                          
+                        }, icon: Icon(Icons.visibility)
+                        )
                       ),
+
+
+
                       validator: (value) {
                         if(value == null || value.isEmpty)
                         {
                           return "please enter your password";
+                        }
+                        if (value.length < 6) {
+                          return "Password must be at least 6 characters";
                         }
                         return null;
                       },
