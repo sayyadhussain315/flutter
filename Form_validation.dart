@@ -13,6 +13,9 @@ class _MyAppState extends State<MyApp> {
   TextEditingController phone = TextEditingController();
   TextEditingController password = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  bool vshowText = true;
+  bool isHidden = true;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -133,7 +136,7 @@ class _MyAppState extends State<MyApp> {
                   Container(
                     child:  TextFormField(
                       controller: password,
-                      obscureText: true,
+                      obscureText: vshowText,
                       obscuringCharacter: "*",
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
@@ -143,8 +146,13 @@ class _MyAppState extends State<MyApp> {
                           ),
 
                         suffixIcon: IconButton(onPressed: (){
-                          
-                        }, icon: Icon(Icons.visibility)
+                            setState(() {
+                              isHidden = !isHidden;
+                              vshowText = !vshowText;
+                            });
+                        }, icon: Icon(
+                          isHidden ? Icons.visibility_off : Icons.visibility,
+                        )
                         )
                       ),
 
