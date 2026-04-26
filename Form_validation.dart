@@ -15,7 +15,6 @@ class _MyAppState extends State<MyApp> {
   final formKey = GlobalKey<FormState>();
   bool vshowText = true;
   bool isHidden = true;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -155,9 +154,6 @@ class _MyAppState extends State<MyApp> {
                         )
                         )
                       ),
-
-
-
                       validator: (value) {
                         if(value == null || value.isEmpty)
                         {
